@@ -1,13 +1,15 @@
-const express = require('express');
+const express = require("express");
 const app = express();
 const port = 3000;
 
-app.get('/', (req, res) => {
-    res.status(200).json({
-        'message': 'Hola Mundo'
-    })
-})
+app.get("/", (req, res) => {
+  res.status(200).json({
+    message: "Hola Mundo",
+  });
+});
 
 app.listen(port, () => {
-    console.log(`Servidor escuchando en el puerto ${port}`);
-})
+  console.log(`Servidor escuchando en el puerto ${port}`);
+});
+
+module.exports = app;
